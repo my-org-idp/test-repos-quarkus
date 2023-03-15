@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "my-quarkus-app"
+  description: "test"
+  annotations:
+    github.com/project-slug: my-org-idp/test-repos-quarkus
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - java
+    - quarkus
+  links:
+    - url: https://devspaces.apps.example-cluster.com/#https://github.com/my-org-idp/test-repos-quarkus?che-editor=che-incubator/che-code/insiders&devfilePath=.devfile-vscode.yaml
+      title: CodeReady Workspaces (VS Code)
+      icon: web
+    - url: https://devspaces.apps.example-cluster.com/#https://github.com/my-org-idp/test-repos-quarkus?che-editor=che-incubator/che-idea/next&devfilePath=.devfile-intellij.yaml
+      title: CodeReady Workspaces (JetBrains IntelliJ)
+      icon: web
+spec:
+  type: service
+  lifecycle: production
+  owner: "my-org-idp"
